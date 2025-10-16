@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>TDS Project - Simple captcha viewer that takes ?url= p</title>
+</head>
+<body>
+  <h1>TDS Project 1 Demo</h1>
+  <p>Simple captcha viewer that takes ?url= param and shows image</p>
+  <div id="output">Default sample output (no attachment)</div>
+  <script>
+    // If URL param ?url= is provided, show it
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get('url');
+    if (url) {
+      document.getElementById('output').textContent = 'Captcha URL: ' + url;
+    }
+  </script>
+</body>
+</html>
